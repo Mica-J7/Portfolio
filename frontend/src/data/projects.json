@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1,
+    "title": "My Session",
+    "description": "My Session est mon premier projet personnel. C'est un site qui permet de créer ses propres séances de musculation pour suivre sa progression.",
+    "img": "@/asset/projects-img/my-session.png",
+    "tasks": ["Découpage de la maquette", "Intégration de l'interface du site en HTML et CSS"],
+    "techs": [
+      {
+        "name": "HTML",
+        "logo": "@/asset/projects-logo/html.png"
+      },
+      {
+        "name": "SCSS",
+        "logo": "@/asset/projects-logo/css.png"
+      },
+      {
+        "name": "GitHub",
+        "logo": "@/asset/projects-logo/github.png"
+      }
+    ],
+    "variant": "perso",
+    "type": "perso"
+  },
+  {
+    "id": 2,
+    "title": "Booki",
+    "description": "Booki est un site qui permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+    "img": "@/asset/projects-img/booki.png",
+    "tasks": [
+      "Faire le découpage d'une maquette avec Figma",
+      "Intégrer du contenu conformément à une maquette avec HTML et CSS",
+      "Implémenter une interface responsive avec HTML et CSS"
+    ],
+    "techs": [
+      {
+        "name": "Figma",
+        "logo": "@/asset/projects-logo/figma.png"
+      },
+      {
+        "name": "HTML",
+        "logo": "@/asset/projects-logo/html.png"
+      },
+      {
+        "name": "CSS",
+        "logo": "@/asset/projects-logo/css.png"
+      },
+      {
+        "name": "GitHub",
+        "logo": "@/asset/projects-logo/github.png"
+      }
+    ],
+    "variant": "formation",
+    "type": "formation"
+  },
+  {
+    "id": 3,
+    "title": "Sophie Bluel - Architecte d'intérieur",
+    "description": "Site portfolio d’une architecte d’intérieur.",
+    "img": "@/asset/projects-img/bluel.png",
+    "tasks": [
+      "Récupérer les données utilisateurs via des formulaires côté Frontend",
+      "Manipuler les éléments du DOM avec JavaScript",
+      "Gérer les événements utilisateurs avec JavaScript",
+      "Gérer un Token de connexion",
+      "Envoyer des requêtes à une API"
+    ],
+    "techs": [
+      {
+        "name": "HTML",
+        "logo": "@/asset/projects-logo/html.png"
+      },
+      {
+        "name": "CSS",
+        "logo": "@/asset/projects-logo/css.png"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "@/asset/projects-logo/js.png"
+      },
+      {
+        "name": "GitHub",
+        "logo": "@/asset/projects-logo/github.png"
+      }
+    ],
+    "variant": "formation",
+    "type": "formation"
+  },
+  {
+    "id": 4,
+    "title": "Nina Carducci - Photographe",
+    "description": "Site vitrine d'une photographe indépendante.",
+    "img": "@/asset/projects-img/nina.png",
+    "tasks": [
+      "Optimiser les performances d’un site web",
+      "Optimiser le référencement (SEO) d'un site web",
+      "Améliorer l'accessibilité d'un site web",
+      "Débugger des fonctionnalités d'un site web",
+      "Créer un  rapport d'audit"
+    ],
+    "techs": [
+      {
+        "name": "HTML",
+        "logo": "@/asset/projects-logo/html.png"
+      },
+      {
+        "name": "CSS",
+        "logo": "@/asset/projects-logo/css.png"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "@/asset/projects-logo/js.png"
+      },
+      {
+        "name": "GitHub",
+        "logo": "@/asset/projects-logo/github.png"
+      }
+    ],
+    "variant": "formation",
+    "type": "formation"
+  },
+  {
+    "id": 5,
+    "title": "Kasa",
+    "description": "Kasa est une entreprise de location d’appartements entre particuliers.",
+    "img": "@/asset/projects-img/kasa.png",
+    "tasks": [
+      "Initialiser une application avec Vite",
+      "Configurer la navigation entre les pages de l'application avec React Router",
+      "Développer des éléments de l'interface d'un site web grâce à des composants React",
+      "Développer une interface web avec SCSS",
+      "Créer des animations SCSS pour améliorer l'expérience utilisateur"
+    ],
+    "techs": [
+      {
+        "name": "HTML",
+        "logo": "@/asset/projects-logo/html.png"
+      },
+      {
+        "name": "SCSS",
+        "logo": "@/asset/projects-logo/scss.png"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "@/asset/projects-logo/js.png"
+      },
+      {
+        "name": "React",
+        "logo": "@/asset/projects-logo/react.png"
+      },
+      {
+        "name": "Vite",
+        "logo": "@/asset/projects-logo/vite.png"
+      },
+      {
+        "name": "GitHub",
+        "logo": "@/asset/projects-logo/github.png"
+      }
+    ],
+    "variant": "formation",
+    "type": "formation"
+  },
+  {
+    "id": 6,
+    "title": "Mon Vieux Grimoire",
+    "description": "Site de référencement et de notation de livres.",
+    "img": "@/asset/projects-img/mvg.png",
+    "tasks": [
+      "Implémenter un modèle logique de données conformément à la réglementation",
+      "Créer un serveiur Node.js avec Express",
+      "Créer une API REST",
+      "Mettre en œuvre des opérations CRUD de manière sécurisée",
+      "Créer une base de données NoSQL avec MongoDB",
+      "Stocker des données de manière sécurisée",
+      "Gérer le téléchargement et l'optimisation des images avec Multer et Sharp"
+    ],
+    "techs": [
+      {
+        "name": "HTML",
+        "logo": "@/asset/projects-logo/html.png"
+      },
+      {
+        "name": "SCSS",
+        "logo": "@/asset/projects-logo/scss.png"
+      },
+      {
+        "name": "Node.js",
+        "logo": "@/asset/projects-logo/node.png"
+      },
+      {
+        "name": "Express",
+        "logo": "@/asset/projects-logo/express.png"
+      },
+      {
+        "name": "MongoDB",
+        "logo": "@/asset/projects-logo/mongo.png"
+      },
+      {
+        "name": "GitHub",
+        "logo": "@/asset/projects-logo/github.png"
+      }
+    ],
+    "variant": "formation",
+    "type": "formation"
+  },
+  {
+    "id": 7,
+    "title": "Menu Maker",
+    "description": "Site permettant aux restaurateurs d’afficher et de mettre en page leurs menus facilement.",
+    "img": "@/asset/projects-img/menumaker.png",
+    "tasks": [
+      "Suivre le déroulement du projet grâce à un outil de gestion de projet",
+      "Rédiger les spécifications techniques d'un projet web à partir de besoins fonctionnels",
+      "Découper une fonctionnalités en tâches pour préparer le développement",
+      "Présenter la solution technique",
+      "Mettre en place une méthode de veille technologique",
+      "Versionner son projet avec Git et Github",
+      "Installer un environnement de développement front-end"
+    ],
+    "techs": [
+      {
+        "name": "Notion",
+        "logo": "@/asset/projects-logo/notion.png"
+      },
+      {
+        "name": "GitHub",
+        "logo": "@/asset/projects-logo/github.png"
+      }
+    ],
+    "variant": "formation",
+    "type": "formation"
+  }
+]

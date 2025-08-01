@@ -1,0 +1,32 @@
+.section__presentation {
+  background-color: antiquewhite;
+  padding: 20px 200px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    &__titles {
+      h1 {
+        margin: 0 0 20px 0;
+      }
+
+      h2 {
+        margin: 0;
+      }
+
+      p {
+        margin: 20px 0;
+        text-align: justify;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px;
+    }
+  }
+}
