@@ -1,0 +1,44 @@
+@use '@/styles/variables' as *;
+
+.card-formation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  background-color: $color-cards;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+
+  img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__title {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  &__description {
+    text-align: justify;
+  }
+
+  &__tasks {
+    list-style: circle;
+    padding: 0;
+  }
+
+  &__techs {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}

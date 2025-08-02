@@ -1,0 +1,13 @@
+@use '@/styles/variables' as *;
+
+@keyframes neonPulse {
+  0%,
+  100% {
+    box-shadow: $neon-box-shadow-1;
+  }
+  50% {
+    box-shadow: $neon-box-shadow-2;
+  }
+}
+
+// @use '@/styles/animations';

@@ -1,6 +1,25 @@
-.section__presentation {
-  background-color: antiquewhite;
-  padding: 20px 200px;
+@use '@/styles/variables' as *;
+@use '@/styles/animations';
+
+.section-presentation {
+  position: relative;
+  padding: 100px 200px;
+  background: $color-section-blue;
+  animation: neonPulse 4s ease-in-out infinite;
+  box-shadow: $neon-box-shadow-1;
+  z-index: 75;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    height: 20px;
+    box-shadow: $neon-box-shadow-2;
+    z-index: -1;
+    pointer-events: none;
+  }
 
   &__content {
     display: flex;
@@ -13,6 +32,7 @@
       }
 
       h2 {
+        font-size: 2rem;
         margin: 0;
       }
 

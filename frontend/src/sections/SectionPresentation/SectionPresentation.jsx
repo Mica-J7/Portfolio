@@ -2,9 +2,9 @@ import './section-presentation.scss';
 
 function SectionPresentation() {
   return (
-    <section className="section__presentation" id="presentation">
-      <div className="section__presentation__content">
-        <div className="section__presentation__content__titles">
+    <section className="section-presentation" id="presentation">
+      <div className="section-presentation__content">
+        <div className="section-presentation__content__titles">
           <h1>
             Michaël Jongeau <br />
             Développeur web junior
@@ -16,7 +16,7 @@ function SectionPresentation() {
             différents outils, afin de concevoir des sites performants, esthétiques et sécurisés.
           </p>
         </div>
-        <div className="section__presentation__content__buttons">
+        <div className="section-presentation__content__buttons">
           <button>Me Contacter</button>
           <button>GitHub</button>
           <button>Mon CV</button>
