@@ -4,9 +4,22 @@ $font-size-base: 16px;
 $line-height-base: 1.5;
 
 // Colors
-$color-section-white: #ffffff;
+$color-text-dark: #2b2d42;
+$color-text-light: #797a7a;
+
+$color-cards: #ffffff;
+
+$color-section-white: #f8f9fa;
 $color-section-blue: #d0f0ff;
-$color-cards: #f7f7f7;
+
+$color-border: #47b3f1;
+$color-gray-border: #dee2e6;
+$color-blue-secondary: #a6dcff;
+
+$color-hover: #57b5f8;
+
+$color-error: #e63946;
+
 $bg-gradient-blue: linear-gradient(135deg, #e0f7ff, #f0f3ff);
 
 // Shadows

@@ -1,0 +1,63 @@
+@use '@/styles/variables' as *;
+
+#contact {
+  scroll-margin-top: 40px;
+}
+
+.section-contact {
+  padding: 100px 200px;
+  background-color: $color-section-blue;
+
+  h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+    padding: 50px 0;
+    margin: auto;
+
+    input {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem 0.8rem;
+      border: 2px solid #ccc;
+      border-radius: 3px;
+      font-size: 1rem;
+      color: $color-text-light;
+      background-color: $color-section-white;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        border-color: $color-border;
+      }
+
+      &:focus {
+        border-color: $color-border;
+        outline: none;
+      }
+    }
+
+    &__button {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: white;
+      background-color: #333;
+      border: solid 2px transparent;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px);
+        background-color: $color-hover;
+        color: $color-text-dark;
+        border-color: $color-text-dark;
+      }
+    }
+  }
+}

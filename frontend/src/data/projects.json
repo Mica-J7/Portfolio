@@ -44,12 +44,12 @@
         "logo": "@/asset/projects-logo/mongo.png"
       },
       {
-        "name": "GitHub",
-        "logo": "@/asset/projects-logo/github.png"
-      },
-      {
         "name": "Postman",
         "logo": "@/asset/projects-logo/postman.png"
+      },
+      {
+        "name": "GitHub",
+        "logo": "@/asset/projects-logo/github.png"
       }
     ],
     "variant": "perso",

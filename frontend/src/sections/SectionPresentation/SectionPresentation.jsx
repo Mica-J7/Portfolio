@@ -1,3 +1,4 @@
+import GitHub from '@/assets/logo/github.png';
 import './section-presentation.scss';
 
 function SectionPresentation() {
@@ -13,13 +14,15 @@ function SectionPresentation() {
           <p>
             Après plusieurs années passées dans le domaine de la logistique, je me reconvertis aujourd’hui avec passion
             dans le développement web. Je me forme en continu pour progresser en Front-end, Back-end et sur les
-            différents outils, afin de concevoir des sites performants, esthétiques et sécurisés.
+            différents outils permettant de concevoir des sites performants, esthétiques et sécurisés.
           </p>
         </div>
         <div className="section-presentation__content__buttons">
-          <button>Me Contacter</button>
-          <button>GitHub</button>
-          <button>Mon CV</button>
+          <button className="btn">ME CONTACTER</button>
+          <button className="btn" id="btn-github">
+            <img src={GitHub} alt="GitHub" /> GITHUB
+          </button>
+          <button className="btn">MON CV</button>
         </div>
       </div>
     </section>

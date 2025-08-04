@@ -1,6 +1,10 @@
 @use '@/styles/variables' as *;
 @use '@/styles/animations';
 
+#presentation {
+  scroll-margin-top: 40px;
+}
+
 .section-presentation {
   position: relative;
   padding: 100px 200px;
@@ -37,16 +41,49 @@
       }
 
       p {
-        margin: 20px 0;
+        margin: 50px 0;
         text-align: justify;
       }
     }
 
     &__buttons {
       display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 10px;
+      gap: 20px;
+      text-wrap: nowrap;
+      margin-top: 10px;
+
+      .btn {
+        width: 33%;
+        padding: 0 5px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        background-color: #333;
+        border: solid 2px transparent;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          transform: translateY(-5px);
+          background-color: $color-hover;
+          color: $color-text-dark;
+          border-color: $color-text-dark;
+        }
+      }
+
+      #btn-github {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        color: $color-text-dark;
+        background-color: white;
+        border: solid 2px $color-text-dark;
+
+        &:hover {
+          background-color: $color-hover;
+        }
+      }
     }
   }
 }

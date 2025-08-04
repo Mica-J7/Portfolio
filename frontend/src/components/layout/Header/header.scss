@@ -5,7 +5,6 @@ header {
   top: 0;
   z-index: 100;
   background: white;
-  box-shadow: $box-shadow;
 
   .header__nav {
     display: flex;
@@ -16,7 +15,7 @@ header {
 
     &__ul {
       display: flex;
-      gap: 50px;
+      gap: 80px;
       list-style: none;
       margin: 0;
       padding: 30px;
