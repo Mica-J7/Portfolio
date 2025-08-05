@@ -1,21 +1,29 @@
+import GitHub from '@/assets/logo/black-github.png';
 import './card-formation.scss';
 
-function CardFormation({ img, title, description, tasks = [], techs = [] }) {
+function CardFormation({ project }) {
   return (
-    <article className="card-formation">
-      <img className="card-formation__img" src={img} alt={title} />
+    <article>
+      <div className="card-formation">
+        <div className="card-formation__img-container">
+          <img
+            src={`http://localhost:3000${project.image.url}`}
+            alt={project.image.alt}
+            className="card-formation__img-container__img-project"
+          />
+          <h3 className="card-formation__img-container__title">{project.title}</h3>
+        </div>
+      </div>
       <div className="card-formation__content">
-        <h3 className="card-formation__title">{title}</h3>
-        <p className="card-formation__description">{description}</p>
-        <ul className="card-formation__tasks">
-          {tasks.map((task, id) => (
-            <li key={id}>{task}</li>
-          ))}
-        </ul>
-        <ul className="card-formation__techs">
-          {techs.map((tech, id) => (
-            <li key={id}>
-              <img src={tech} alt={tech.name} />
+        <a href={project.github.url} target="_blank" rel="noopener noreferrer" className="btn">
+          <img src={GitHub} />
+          GitHub
+        </a>
+        <p className="card-formation__content__description">{project.description}</p>
+        <ul className="card-formation__content__techs">
+          {project.techIcons.map((icon, index) => (
+            <li key={index}>
+              <img src={`http://localhost:3000${icon.url}`} alt={icon.alt} />
             </li>
           ))}
         </ul>

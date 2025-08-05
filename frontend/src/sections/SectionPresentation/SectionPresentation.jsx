@@ -24,9 +24,17 @@ function SectionPresentation() {
 
         <div className="section-presentation__content__buttons">
           <button className="btn">ME CONTACTER</button>
-          <button className="btn" id="btn-github">
-            <img src={GitHub} alt="GitHub" /> GITHUB
-          </button>
+          <a
+            href="https://github.com/Mica-J7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+            id="btn-github"
+          >
+            <img src={GitHub} alt="GitHub" />
+            GITHUB
+          </a>
+
           <button className="btn">MON CV</button>
         </div>
       </div>

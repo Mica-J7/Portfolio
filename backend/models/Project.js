@@ -2,18 +2,17 @@ const mongoose = require('mongoose');
 
 const projectSchema = new mongoose.Schema({
   image: {
-    url: { type: String, required: true },
-    alt: { type: String, required: true },
+    url: String,
+    alt: String,
   },
-  title: { type: String, required: true },
-  description: { type: String, required: true },
-  tasks: [{ type: String }],
-  techIcons: [
-    {
-      url: { type: String, required: true },
-      alt: { type: String, required: true },
-    },
-  ],
+  title: String,
+  github: {
+    url: { type: String, required: true },
+    icon: { type: String },
+    alt: { type: String },
+  },
+  description: String,
+  techIcons: [{ url: String, alt: String }],
 });
 
 module.exports = mongoose.model('Project', projectSchema);
