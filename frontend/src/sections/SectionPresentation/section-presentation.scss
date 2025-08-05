@@ -2,33 +2,19 @@
 @use '@/styles/animations';
 
 #presentation {
-  scroll-margin-top: 40px;
+  scroll-margin-top: 90px;
 }
 
 .section-presentation {
   position: relative;
-  padding: 100px 200px;
+  padding: 50px 200px 100px 200px;
   background: $color-section-blue;
-  animation: neonPulse 4s ease-in-out infinite;
-  box-shadow: $neon-box-shadow-1;
   z-index: 75;
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -20px;
-    height: 20px;
-    box-shadow: $neon-box-shadow-2;
-    z-index: -1;
-    pointer-events: none;
-  }
 
   &__content {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 100%;
 
     &__titles {
       h1 {
@@ -39,18 +25,26 @@
         font-size: 2rem;
         margin: 0;
       }
+    }
 
-      p {
-        margin: 50px 0;
-        text-align: justify;
-      }
+    &__p-left {
+      width: 40%;
+      margin: 50px 0;
+      text-align: justify;
+    }
+
+    &__p-right {
+      margin-left: 60%;
+      margin-bottom: 50px;
+      margin-top: 0;
+      text-align: justify;
     }
 
     &__buttons {
       display: flex;
       gap: 20px;
+      width: 40%;
       text-wrap: nowrap;
-      margin-top: 10px;
 
       .btn {
         width: 33%;
@@ -58,16 +52,15 @@
         font-size: 1rem;
         font-weight: 600;
         color: white;
-        background-color: #333;
+        background-color: $color-buttons;
         border: solid 2px transparent;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
 
         &:hover {
-          transform: translateY(-5px);
+          transform: translateY(-3px);
+          border-radius: 3px;
           background-color: $color-hover;
-          color: $color-text-dark;
-          border-color: $color-text-dark;
         }
       }
 
@@ -81,7 +74,8 @@
         border: solid 2px $color-text-dark;
 
         &:hover {
-          background-color: $color-hover;
+          background-color: #cecbcb;
+          border-radius: 3px;
         }
       }
     }

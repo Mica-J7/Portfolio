@@ -1,11 +1,11 @@
 @use '@/styles/variables' as *;
 
 #contact {
-  scroll-margin-top: 40px;
+  scroll-margin-top: 90px;
 }
 
 .section-contact {
-  padding: 100px 200px;
+  padding: 50px 200px 100px 200px;
   background-color: $color-section-blue;
 
   h2 {
@@ -13,50 +13,92 @@
     margin: 0;
   }
 
-  &__form {
+  p {
+    font-weight: 600;
+    text-align: center;
+    margin: 50px 0 30px 0;
+  }
+
+  &__content {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 40%;
-    padding: 50px 0;
-    margin: auto;
+    justify-content: space-around;
 
-    input {
-      margin-bottom: 0.5rem;
-      padding: 0.5rem 0.8rem;
-      border: 2px solid #ccc;
-      border-radius: 3px;
-      font-size: 1rem;
-      color: $color-text-light;
-      background-color: $color-section-white;
-      transition: all 0.2s ease-in-out;
+    &__logos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
 
-      &:hover {
-        border-color: $color-border;
+      h3 {
+        font-size: 1rem;
+        margin: 0 0 10px 0;
+        text-decoration: underline;
       }
 
-      &:focus {
-        border-color: $color-border;
-        outline: none;
+      &--cadre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border: solid 4px $color-text-dark;
+
+        img {
+          width: 48px;
+          height: 48px;
+          transition: transform 0.2s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(-3px);
+          }
+        }
       }
     }
 
-    &__button {
-      width: 100%;
-      padding: 10px 0;
-      font-size: 1rem;
-      font-weight: 600;
-      color: white;
-      background-color: #333;
-      border: solid 2px transparent;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 40%;
+      padding-top: 8px;
 
-      &:hover {
-        transform: translateY(-5px);
-        background-color: $color-hover;
-        color: $color-text-dark;
-        border-color: $color-text-dark;
+      input {
+        margin-bottom: 0.5rem;
+        padding: 0.5rem 0.8rem;
+        border: 2px solid #ccc;
+        border-radius: 3px;
+        font-size: 1rem;
+        color: $color-text-light;
+        background-color: $color-section-white;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          border-color: $color-border;
+        }
+
+        &:focus {
+          border-color: $color-border;
+          outline: none;
+        }
+      }
+
+      &__button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        background-color: $color-buttons;
+        border: solid 2px transparent;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: translateY(-3px);
+          border-radius: 3px;
+          background-color: $color-hover;
+        }
       }
     }
   }

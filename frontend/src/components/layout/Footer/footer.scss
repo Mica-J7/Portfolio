@@ -1,0 +1,45 @@
+@use '@/styles/variables' as *;
+
+#presentation {
+  scroll-margin-top: 90px;
+}
+
+footer {
+  background-color: $color-buttons;
+  padding: 50px 50px;
+
+  .grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr auto 1fr; // ou 1fr 1fr 1fr, selon la largeur que tu veux
+    align-items: center;
+
+    &__center {
+      grid-column: 2;
+      justify-self: center;
+
+      p {
+        text-align: center;
+        margin: 0 0 10px 0;
+        font-weight: 600;
+        color: white;
+      }
+    }
+
+    &__right {
+      grid-column: 3;
+      justify-self: end;
+
+      img {
+        background-color: white;
+        border-radius: 10px;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: translateY(-3px);
+          background-color: $color-border;
+        }
+      }
+    }
+  }
+}

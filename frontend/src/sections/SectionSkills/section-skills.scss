@@ -1,11 +1,11 @@
 @use '@/styles/variables' as *;
 
 #skills {
-  scroll-margin-top: 40px;
+  scroll-margin-top: 90px;
 }
 
 .section-skills {
-  padding: 100px 200px;
+  padding: 50px 200px 100px 200px;
   background-color: $color-section-white;
 
   h2 {
@@ -23,6 +23,8 @@
       margin: 0;
       font-weight: 800;
       text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
       text-align: center;
     }
 
