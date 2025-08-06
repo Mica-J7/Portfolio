@@ -15,10 +15,12 @@ function SectionContact() {
   return (
     <section className="section-contact" id="contact">
       <h2>Me contacter :</h2>
-      <p>
-        N'hésitez pas à me contacter sur mes réseaux ou via formulaire si vous souhaitez discuter d'un projet ou de tout
-        autres choses.
-      </p>
+      <div className="section-contact__text">
+        <p>
+          N'hésitez pas à me contacter sur mes réseaux ou via formulaire si vous souhaitez discuter d'un projet ou de
+          tout autres choses.
+        </p>
+      </div>
       <div className="section-contact__content">
         <div className="section-contact__content__logos">
           <h3>Mes réseaux</h3>

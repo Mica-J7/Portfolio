@@ -5,7 +5,9 @@ import JavaScript from '@/assets/logo/js.png';
 import React from '@/assets/logo/react.png';
 import Nodejs from '@/assets/logo/nodejs.png';
 import Mongodb from '@/assets/logo/mongodb.png';
+import Figma from '@/assets/logo/figma.png';
 import Vite from '@/assets/logo/vite.png';
+import Notion from '@/assets/logo/notion.png';
 import Git from '@/assets/logo/git.png';
 import GitHub from '@/assets/logo/github.png';
 import './section-skills.scss';
@@ -61,11 +63,22 @@ function SectionSkills() {
 
         <div className="all-sections__tools">
           <h3>Outils :</h3>
-          <div className="group-logo">
-            <img src={Vite} alt="Logo Vite" />
-            <span>Vite</span>
+          <div className="all-sections__tools__top">
+            <div className="group-logo">
+              <img src={Figma} alt="Logo Figma" />
+              <span>Figma</span>
+            </div>
+            <div className="group-logo">
+              <img src={Vite} alt="Logo Vite" />
+              <span>Vite</span>
+            </div>
+            <div className="group-logo">
+              <img src={Notion} alt="Logo Notion" />
+              <span>Notion</span>
+            </div>
           </div>
-          <div className="all-sections__tools__git-group">
+
+          <div className="all-sections__tools__bot">
             <div className="group-logo">
               <img src={Git} alt="Logo Git" />
               <span>Git</span>

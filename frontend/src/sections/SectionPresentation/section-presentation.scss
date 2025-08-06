@@ -47,18 +47,23 @@
       text-wrap: nowrap;
 
       .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 33%;
         padding: 0 5px;
-        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
         font-weight: 600;
+        font-size: 1rem;
         color: white;
         background-color: $color-buttons;
         border: solid 2px transparent;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+        text-decoration: none;
 
         &:hover {
-          transform: translateY(-3px);
+          transform: translateY(-5px);
           border-radius: 3px;
           background-color: $color-hover;
         }
@@ -72,8 +77,6 @@
         color: $color-text-dark;
         background-color: white;
         border: solid 2px $color-text-dark;
-        text-decoration: none;
-        color: inherit;
 
         &:hover {
           background-color: #cecbcb;

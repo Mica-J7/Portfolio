@@ -23,7 +23,9 @@ function SectionPresentation() {
         </p>
 
         <div className="section-presentation__content__buttons">
-          <button className="btn">ME CONTACTER</button>
+          <a href="#contact" className="btn">
+            ME CONTACTER
+          </a>
           <a
             href="https://github.com/Mica-J7"
             target="_blank"

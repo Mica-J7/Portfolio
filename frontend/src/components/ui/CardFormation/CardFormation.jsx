@@ -15,10 +15,12 @@ function CardFormation({ project }) {
         </div>
       </div>
       <div className="card-formation__content">
-        <a href={project.github.url} target="_blank" rel="noopener noreferrer" className="btn">
-          <img src={GitHub} />
-          GitHub
-        </a>
+        {project.github.url && (
+          <a href={project.github.url} target="_blank" rel="noopener noreferrer" className="btn">
+            <img src={GitHub} />
+            GitHub
+          </a>
+        )}
         <p className="card-formation__content__description">{project.description}</p>
         <ul className="card-formation__content__techs">
           {project.techIcons.map((icon, index) => (

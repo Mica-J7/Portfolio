@@ -6,13 +6,14 @@ const projectSchema = new mongoose.Schema({
     alt: String,
   },
   title: String,
+  description: String,
   github: {
-    url: { type: String, required: true },
+    url: { type: String },
     icon: { type: String },
     alt: { type: String },
   },
-  description: String,
   techIcons: [{ url: String, alt: String }],
+  type: String,
 });
 
 module.exports = mongoose.model('Project', projectSchema);
