@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import CardFormation from '@/components/ui/CardFormation/CardFormation.jsx';
+import ProjectCard from '@/components/ui/ProjectCard/ProjectCard.jsx';
 import './section-projects.scss';
 
 function SectionProjects() {
   const [projects, setProjects] = useState([]);
+  const [showMore, setShowMore] = useState(false);
+
+  const displayedProjects = showMore ? projects : projects.slice(0, 3);
 
   useEffect(() => {
     axios
@@ -24,7 +27,7 @@ function SectionProjects() {
             {projects
               .filter((project) => project.type === 'perso')
               .map((project) => (
-                <CardFormation key={project._id} project={project} />
+                <ProjectCard key={project._id} project={project} />
               ))}
           </div>
           <div className="section-projects__content__text">
@@ -35,19 +38,23 @@ function SectionProjects() {
               <br />
               <br />
               C'est un projet Fullstack, le Front-end est fait avec React, le Back-end est en Node.js avec un serveur
-              Express. J'ai créé une API REST et la base de données est en NoSQL avec MongoDB Atlas.
+              Express. J'ai créé une API REST, et une base de données NoSQL avec MongoDB Atlas.
             </p>
           </div>
         </div>
         <div className="section-projects__content__formation">
           <h3 className="section-projects__content__title">Projets de formation :</h3>
           <div className="section-projects__content__cards">
-            {projects
+            {displayedProjects
               .filter((project) => project.type === 'formation')
               .map((project) => (
-                <CardFormation key={project._id} project={project} />
+                <ProjectCard key={project._id} project={project} />
               ))}
           </div>
+
+          {projects.length > 3 && (
+            <button onClick={() => setShowMore(!showMore)}>{showMore ? 'Afficher moins' : 'Afficher plus'}</button>
+          )}
         </div>
       </div>
     </section>
