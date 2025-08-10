@@ -2,7 +2,7 @@ import Html from '@/assets/logo/html.png';
 import Css from '@/assets/logo/css.png';
 import Sass from '@/assets/logo/sass.png';
 import JavaScript from '@/assets/logo/js.png';
-import React from '@/assets/logo/react.png';
+import ReactLogo from '@/assets/logo/react.png';
 import Nodejs from '@/assets/logo/nodejs.png';
 import Mongodb from '@/assets/logo/mongodb.png';
 import Figma from '@/assets/logo/figma.png';
@@ -41,7 +41,7 @@ function SectionSkills() {
               <span>JavaScript</span>
             </div>
             <div className="group-logo">
-              <img src={React} alt="Logo React" />
+              <img src={ReactLogo} alt="Logo React" />
               <span>React</span>
             </div>
           </div>

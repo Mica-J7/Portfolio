@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import ProjectCard from '@/components/ui/ProjectCard/ProjectCard.jsx';
 import './section-projects.scss';
@@ -6,8 +6,11 @@ import './section-projects.scss';
 function SectionProjects() {
   const [projects, setProjects] = useState([]);
   const [showMore, setShowMore] = useState(false);
+  const anchorRef = useRef(null);
 
-  const displayedProjects = showMore ? projects : projects.slice(0, 3);
+  const projectsFormation = projects.filter((project) => project.type === 'formation');
+  const firstThree = projectsFormation.slice(0, 2);
+  const remaining = projectsFormation.slice(2);
 
   useEffect(() => {
     axios
@@ -15,6 +18,17 @@ function SectionProjects() {
       .then((res) => setProjects(res.data))
       .catch((err) => console.error(err));
   }, []);
+
+  const handleToggle = () => {
+    if (showMore) {
+      // On ferme + on scroll directement vers l'ancre
+      setShowMore(false);
+      anchorRef.current?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // On ouvre
+      setShowMore(true);
+    }
+  };
 
   return (
     <section className="section-projects" id="projects">
@@ -44,16 +58,24 @@ function SectionProjects() {
         </div>
         <div className="section-projects__content__formation">
           <h3 className="section-projects__content__title">Projets de formation :</h3>
+
           <div className="section-projects__content__cards">
-            {displayedProjects
-              .filter((project) => project.type === 'formation')
-              .map((project) => (
+            {/* Bloc visible par défaut */}
+            {firstThree.map((project) => (
+              <ProjectCard key={project._id} project={project} />
+            ))}
+            <div ref={anchorRef} className="divTest"></div>
+            {/* Bloc masqué / animé */}
+            <div className={`animated-wrapper ${showMore ? 'open' : ''}`}>
+              {remaining.map((project) => (
                 <ProjectCard key={project._id} project={project} />
               ))}
+            </div>
           </div>
-
-          {projects.length > 3 && (
-            <button onClick={() => setShowMore(!showMore)}>{showMore ? 'Afficher moins' : 'Afficher plus'}</button>
+          {projects.filter((project) => project.type === 'formation').length > 3 && (
+            <button onClick={handleToggle} className="show-more-btn">
+              {showMore ? 'Afficher moins' : 'Afficher plus de projets de formation'}
+            </button>
           )}
         </div>
       </div>

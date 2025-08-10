@@ -5,6 +5,10 @@
   scroll-margin-top: 50px;
 }
 
+.divTest {
+  scroll-margin-top: 800px;
+}
+
 .section-projects {
   display: flex;
   flex-direction: column;
@@ -48,7 +52,7 @@
 
     &__title {
       font-size: 2rem;
-      margin: 20px 0 40px 0;
+      margin: 20px 0 0 0;
     }
 
     &__formation {
@@ -65,9 +69,50 @@
       flex-direction: column;
       align-items: center;
       flex-wrap: wrap;
-      gap: 100px;
       width: 100%;
-      margin-top: 30px;
+    }
+  }
+
+  .animated-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 30px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      max-height 0.6s ease,
+      opacity 0.6s ease;
+
+    &.open {
+      max-height: 3000px; // Suffisamment grand pour contenir les cards restantes
+      opacity: 1;
+    }
+  }
+
+  .show-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    margin-top: 20px;
+    padding: 5px 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    background-color: $color-buttons;
+    border: solid 2px transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+      transform: translateY(-5px);
+      border-radius: 3px;
+      background-color: $color-hover;
     }
   }
 }
