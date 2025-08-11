@@ -3,9 +3,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
+const limiter = require('./middlewares/limiter');
 const MONGO_URI = process.env.MONGO_URI;
 
 const projectsRoutes = require('./routes/projects');
+const contactRoutes = require('./routes/contact');
 
 mongoose
   .connect(MONGO_URI)
@@ -30,7 +32,6 @@ app.use(
         callback(new Error('Not allowed by CORS'));
       }
     },
-    credentials: true, // si on utilise cookies ou auth avec credentials
   }),
 );
 
@@ -40,5 +41,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 app.use('/api/projects', projectsRoutes);
+app.use('/api/contact', limiter, contactRoutes);
 
 module.exports = app;

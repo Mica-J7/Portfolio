@@ -1,9 +1,10 @@
 import './textarea.scss';
 
-function Textarea({ value, onChange, maxLength }) {
+function Textarea({ value, onChange, maxLength, name }) {
   return (
     <div>
       <textarea
+        name={name}
         value={value}
         onChange={onChange}
         maxLength={maxLength}
